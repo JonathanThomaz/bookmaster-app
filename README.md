@@ -1,6 +1,6 @@
 Esse é um projeto de um processo de seleção da App Masters(https://appmasters.io/pt/)
 
-## Getting Started
+## Primeiros passos
 
 Para rodar o projeto basta ir ao terminal e setar um dos comandos abaixo:
 
