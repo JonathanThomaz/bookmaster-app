@@ -1,17 +1,24 @@
 import React from 'react';
 import Head from 'next/head';
+import { BookOutlined } from '@ant-design/icons';
+import { Layout } from 'antd';
+const { Header, Footer, Content } = Layout;
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>BookMaster</title>
       </Head>
-
-      <main>
-        <h1>Hello World</h1>
-      </main>
-    </div>
+      <Layout>
+        <Header></Header>
+        <Content>
+          <h1>Content</h1>
+          <BookOutlined />
+        </Content>
+        <Footer>Footer</Footer>
+      </Layout>
+    </>
   );
 };
 
