@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { BookOutlined } from '@ant-design/icons';
 import { Button, Layout } from 'antd';
 import Grid from 'antd/lib/card/Grid';
-import ButtonGroup from 'antd/lib/button/button-group';
+import { books } from '../variables/books';
 
 const { Header, Footer, Content } = Layout;
 
@@ -14,32 +14,41 @@ const Home: React.FC = () => {
         <title>BookMaster</title>
       </Head>
       <Layout>
-        <Header></Header>
+        <Header
+          style={{ fontSize: '20px', color: '#faad14', textAlign: 'center' }}
+        >
+          <span>Biblioteca</span>
+        </Header>
         <Content>
-          <Grid>
-            <BookOutlined style={{ fontSize: '16px', color: '#faad14' }} />
-            <p>
-              <span>Nome do livro:</span>
-              <span>Aqui vai o nome do livro</span>
-            </p>
-            <p>
-              <span>Autor:</span>
-              <span>Aqui vai o autor</span>
-            </p>
-            <p>
-              <span>Número de páginas:</span>
-              <span>Aqui vai o numero de paginas</span>
-            </p>
-            <p>
-              <span>Gêneros:</span>
-              <span>Aqui vai os generos</span>
-            </p>
-            <p>
-              <span>Editoras:</span>
-              <span>Aqui vai as editoras</span>
-            </p>
-            <Button type="default" >Ver Descrição</Button>
-          </Grid>
+          {books.map((book, index) => (
+            <Grid style={{ fontSize: '15px', color: '#120338' }} key={index}>
+              <p>
+                <span>{book.id}</span>
+                <BookOutlined style={{ fontSize: '18px', color: '#faad14' }} />
+              </p>
+              <p>
+                <span>Nome do livro:</span>
+                <span>{book.nome}</span>
+              </p>
+              <p>
+                <span>Autor:</span>
+                <span>{book.autor}</span>
+              </p>
+              <p>
+                <span>Número de páginas:</span>
+                <span>{book.paginas}</span>
+              </p>
+              <p>
+                <span>Gêneros:</span>
+                <span>{book.generos}</span>
+              </p>
+              <p>
+                <span>Editoras:</span>
+                <span>{book.editoras}</span>
+              </p>
+              <Button type="default">Ver Descrição</Button>
+            </Grid>
+          ))}
         </Content>
         <Footer>Footer</Footer>
       </Layout>
