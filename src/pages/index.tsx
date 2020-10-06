@@ -50,7 +50,7 @@ const Home: React.FC = () => {
               <Link
                 href={{
                   pathname: '/description',
-                  query: { id: book.id }
+                  query: { description: book.description }
                 }}
               >
                 <Button type="default">Ver Descrição</Button>

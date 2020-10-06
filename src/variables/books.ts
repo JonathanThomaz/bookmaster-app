@@ -1,11 +1,11 @@
 type book = {
   id: number;
-  nome: string;
-  autor: string;
-  paginas: string;
-  generos: string;
-  editoras: string;
-  description: string;
+  nome?: string;
+  autor?: string;
+  paginas?: string;
+  generos?: string;
+  editoras?: string;
+  description?: string;
 };
 
 export const books: Array<book> = [
