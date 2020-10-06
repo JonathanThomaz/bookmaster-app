@@ -4,6 +4,7 @@ import { BookOutlined } from '@ant-design/icons';
 import { Button, Layout } from 'antd';
 import Grid from 'antd/lib/card/Grid';
 import { books } from '../variables/books';
+import Link from 'next/link';
 
 const { Header, Footer, Content } = Layout;
 
@@ -46,11 +47,18 @@ const Home: React.FC = () => {
                 <span>Editoras:</span>
                 <span>{book.editoras}</span>
               </p>
-              <Button type="default">Ver Descrição</Button>
+              <Link
+                href={{
+                  pathname: '/description',
+                  query: { id: book.id }
+                }}
+              >
+                <Button type="default">Ver Descrição</Button>
+              </Link>
             </Grid>
           ))}
         </Content>
-        <Footer>Footer</Footer>
+        <Footer>Desenvolvido por Jonathan Thomaz</Footer>
       </Layout>
     </>
   );
