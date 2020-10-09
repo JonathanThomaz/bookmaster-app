@@ -22,29 +22,29 @@ const Home: React.FC = () => {
         </Header>
         <Content>
           {books.map((book, index) => (
-            <Grid style={{ fontSize: '15px', color: '#120338' }} key={index}>
+            <Grid style={{ fontSize: '15px', color: '#120338', width:'30%', height:'20%'}} key={index}>
               <p>
                 <span>{book.id}</span>
                 <BookOutlined style={{ fontSize: '18px', color: '#faad14' }} />
               </p>
               <p>
-                <span>Nome do livro:</span>
+                <span>Nome do livro: </span>
                 <span>{book.nome}</span>
               </p>
               <p>
-                <span>Autor:</span>
+                <span>Autor: </span>
                 <span>{book.autor}</span>
               </p>
               <p>
-                <span>Número de páginas:</span>
+                <span>Número de páginas: </span>
                 <span>{book.paginas}</span>
               </p>
               <p>
-                <span>Gêneros:</span>
+                <span>Gêneros: </span>
                 <span>{book.generos}</span>
               </p>
               <p>
-                <span>Editoras:</span>
+                <span>Editoras: </span>
                 <span>{book.editoras}</span>
               </p>
               <Link
